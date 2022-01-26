@@ -1,0 +1,34 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "config": {
+    "url": "https://github.com/shuu11/playwright.git"
+  },
+  "scripts": {
+    "test": "npx playwright test",
+    "codegen": "npx playwright codegen https://www.google.co.jp/",
+
+    "setup": "npm-run-all -s setup:*",
+
+    "setup:init": "git init",
+    "setup:add": "git add .",
+    "setup:commit": "git commit",
+    "setup:branch": "git branch -M main",
+    "setup:remote": "git remote add origin %npm_package_config_url%",
+    "setup:push": "git push -u origin main",
+    "start": "npm-run-all -s start:*",
+    "start:add": "git add .",
+    "start:commit": "git commit",
+    "start:push": "git push origin"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.18.0",
+    "npm-run-all": "^4.1.5",
+    "playwright": "^1.18.0"
+  }
+}
