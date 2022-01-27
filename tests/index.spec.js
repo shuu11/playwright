@@ -1,5 +1,5 @@
-const playwright = require('playwright');
-const { test } = require('@playwright/test');
+import playwright from 'playwright';
+import { test } from '@playwright/test';
 
 const browserTypeAll = ['chromium', 'firefox', 'webkit'];
 const bt = browserTypeAll[0];

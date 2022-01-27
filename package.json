@@ -11,7 +11,7 @@
     "codegen": "npx playwright codegen https://www.google.co.jp/",
 
     "setup": "npm-run-all -s setup:*",
-
+    "setup:rm": "git remote rm origin",
     "setup:init": "git init",
     "setup:add": "git add .",
     "setup:commit": "git commit",
@@ -23,6 +23,7 @@
     "start:commit": "git commit",
     "start:push": "git push origin"
   },
+	"type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
